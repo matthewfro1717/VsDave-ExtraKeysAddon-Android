@@ -93,7 +93,6 @@ class OptionsMenu extends MusicBeatState
 			+ "\n" + (CompatTool.save.data.compatMode ? LanguageManager.getTextString('option_enable_compat') : LanguageManager.getTextString('option_disable_compat'))
 			+ "\n" + (FlxG.save.data.modchart ? 'Mod Chart OFF' : 'Mod Chart ON')
 			+ "\n" + (FlxG.save.data.botplay ? 'Bot Play ON' : 'Bot Play OFF')
-			#end
 			);
 
 		grpControls = new FlxTypedGroup<Alphabet>();
