@@ -67,12 +67,6 @@ class PauseSubState extends MusicBeatSubstate
 		backBg.scrollFactor.set();
 		add(backBg);
 
-		bg = new FlxBackdrop(Paths.image('ui/checkeredBG', 'preload'), 1, 1, true, true, 1, 1);
-		bg.alpha = 0;
-		bg.antialiasing = true;
-		bg.scrollFactor.set();
-		add(bg);
-
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
 		levelInfo.text += PlayState.SONG.song;
 		levelInfo.scrollFactor.set();

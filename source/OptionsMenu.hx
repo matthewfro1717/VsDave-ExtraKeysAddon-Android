@@ -201,13 +201,11 @@ class OptionsMenu extends MusicBeatState
 					CompatTool.save.data.compatMode = !CompatTool.save.data.compatMode;
 					updateGroupControls(CompatTool.save.data.compatMode ? LanguageManager.getTextString('option_enable_compat') : LanguageManager.getTextString('option_disable_compat'), 11, 'Vertical');
 				case 12:
-					if (!awaitingExploitation) FlxG.save.data.modchart = !FlxG.save.data.modchart;
+					FlxG.save.data.modchart = !FlxG.save.data.modchart;
 					updateGroupControls(FlxG.save.data.modchart ? 'Mod Chart OFF' : 'Mod Chart ON', 12, 'Vertical');
-				#if debug
 				case 13:
-					if (!awaitingExploitation) FlxG.save.data.botplay = !FlxG.save.data.botplay;
+					FlxG.save.data.botplay = !FlxG.save.data.botplay;
 					updateGroupControls(FlxG.save.data.botplay ? 'Bot Play ON' : 'Bot Play OFF', 13, 'Vertical');
-				#end
 			}
 		}
 	}
