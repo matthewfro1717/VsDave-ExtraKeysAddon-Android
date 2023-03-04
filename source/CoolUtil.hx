@@ -1,5 +1,6 @@
 package;
 
+import PlayState.shaggyVoice;
 import flixel.group.FlxGroup;
 import flixel.FlxG;
 import openfl.utils.AssetCache;
