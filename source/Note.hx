@@ -1,5 +1,7 @@
 package;
 
+import PlayState.modchartoption;
+import PlayState.scrollType;
 import flixel.input.keyboard.FlxKey;
 import flixel.FlxObject;
 import Controls.Device;
