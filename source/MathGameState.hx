@@ -1,6 +1,5 @@
 package;
 
-import PlayState.shaggyVoice;
 import flixel.system.FlxSound;
 import flixel.system.FlxAssets.FlxSoundAsset;
 import flixel.input.keyboard.FlxKey;
