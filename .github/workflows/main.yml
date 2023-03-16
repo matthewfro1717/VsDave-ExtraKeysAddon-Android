@@ -36,6 +36,7 @@ jobs:
 
       - name: Install Haxelibs
         run: |
+          haxelib --global update haxelib
           haxelib --quiet install lime 7.9.0
           haxelib --quiet install openfl 9.1.0
           haxelib --quiet install flixel
@@ -97,6 +98,7 @@ jobs:
 
       - name: Install Haxelibs
         run: |
+          haxelib --global update haxelib
           haxelib --quiet install lime 7.9.0
           haxelib --quiet install openfl 9.1.0
           haxelib --quiet install flixel
