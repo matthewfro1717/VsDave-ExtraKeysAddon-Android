@@ -23,6 +23,9 @@ class SelectLanguageState extends MusicBeatState
 
    public override function create()
    {
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
       PlayerSettings.init();
 
       FlxG.sound.playMusic(Paths.music('selectLanguageMenu'), 0.7);
@@ -31,12 +34,10 @@ class SelectLanguageState extends MusicBeatState
 
       langaugeList = LanguageManager.getLanguages();
       
-      #if (flixel < "5.0.0") 
       bg = new FlxBackdrop(Paths.image('ui/checkeredBG', 'preload'), 1, 1, true, true, 1, 1);
       bg.antialiasing = true;
       bg.color = langaugeList[curLanguageSelected].langaugeColor;
       add(bg);
-      #end
 
       selectLanguage = new FlxText(0, (FlxG.height / 2) - 300, FlxG.width, "Please Select A Language", 45);
       selectLanguage.setFormat("Comic Sans MS Bold", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -76,9 +77,15 @@ class SelectLanguageState extends MusicBeatState
       }
 
       changeSelection();
+
+      #if mobile
+      addVirtualPad(UP_DOWN, A);
+      #end
    }
    public override function update(elapsed:Float)
    {
+		super.update(elapsed);
+
       var scrollSpeed:Float = 50;
       bg.x -= scrollSpeed * elapsed;
       bg.y -= scrollSpeed * elapsed;
