@@ -3,6 +3,7 @@ package;
 import flixel.math.FlxMath;
 import flixel.tweens.misc.ColorTween;
 import flixel.addons.display.FlxBackdrop;
+import flixel.input.FlxInput;
 import flixel.FlxSprite;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
