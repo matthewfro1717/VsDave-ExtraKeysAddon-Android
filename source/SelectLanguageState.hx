@@ -20,6 +20,7 @@ class SelectLanguageState extends MusicBeatState
    var currentLanguageText:FlxText;
    var langaugeList:Array<Language> = new Array<Language>();
    var accepted:Bool;
+   var addVirtualPad:Bool;
 
    public override function create()
    {
