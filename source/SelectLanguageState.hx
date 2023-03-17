@@ -22,6 +22,7 @@ class SelectLanguageState extends MusicBeatState
    var accepted:Bool;
    var addVirtualPad:Bool;
    var UP_DOWN:Bool;
+   var A:Bool;
 
    public override function create()
    {
