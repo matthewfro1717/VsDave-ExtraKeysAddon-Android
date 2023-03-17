@@ -22,7 +22,6 @@ class SelectLanguageState extends MusicBeatState
    var accepted:Bool;
    var addVirtualPad:Bool;
    var UP_DOWN:Bool;
-   var A:Bool;
 
    public override function create()
    {
@@ -81,7 +80,7 @@ class SelectLanguageState extends MusicBeatState
       changeSelection();
 
       #if mobile
-      addVirtualPad(UP_DOWN, A);
+      addVirtualPad(UP_DOWN);
       #end
    }
    public override function update(elapsed:Float)
