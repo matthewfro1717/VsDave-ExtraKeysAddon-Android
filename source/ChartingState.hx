@@ -1503,8 +1503,8 @@ class ChartingState extends MusicBeatState
 
 	public static function hahaFunnyRecursed()
 	{
-		var songList = FileSystem.readDirectory('assets/songs');
-		for (song in FileSystem.readDirectory('assets/songs'))
+		var songList = ('assets/songs');
+		for (song in ('assets/songs'))
 		{
 			var removeSong = false;
 
