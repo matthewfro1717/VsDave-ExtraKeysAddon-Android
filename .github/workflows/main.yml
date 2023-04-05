@@ -14,8 +14,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  html5-debug:
-    runs-on: ubuntu-latest
+  windows-debug:
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -48,10 +48,10 @@ jobs:
           haxelib list
 
       - name: Compile
-        run: haxelib run lime build html5 -debug
+        run: haxelib run lime build windows -debug
 
       - name: Publish Artifact
         uses: actions/upload-artifact@main
         with:
-          name: html5Build-debug
-          path: 'export/debug/html5/bin'
+          name: WindowsBuild-debug
+          path: 'export/debug/windows/bin'
