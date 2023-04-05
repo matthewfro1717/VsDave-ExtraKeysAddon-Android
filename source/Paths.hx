@@ -72,10 +72,12 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/' + file, type, library);
+			#if desktop
 			if (FileSystem.exists(langaugeReturnPath))
 			{
 				return langaugeReturnPath;
 			}
+			#end
 			else
 			{
 				return defaultReturnPath;
@@ -93,10 +95,12 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/data/$key.txt', TEXT, library);
+			#if desktop
 			if (FileSystem.exists(langaugeReturnPath))
 			{
 				return langaugeReturnPath;
 			}
+			#end
 			else
 			{
 				return defaultReturnPath;
@@ -169,10 +173,12 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/images/$key.png', IMAGE, library);
+			#if desktop
 			if (FileSystem.exists(langaugeReturnPath))
 			{
 				return langaugeReturnPath;
 			}
+			#end
 			else
 			{
 				return defaultReturnPath;
