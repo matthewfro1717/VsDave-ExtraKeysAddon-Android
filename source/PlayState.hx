@@ -6,7 +6,6 @@ import flixel.graphics.frames.FlxFrame;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.Transition;
 import flixel.group.FlxGroup;
-import sys.FileSystem;
 import flixel.util.FlxArrayUtil;
 import flixel.addons.plugin.FlxScrollingText;
 import Alphabet;
@@ -22,6 +21,7 @@ import flixel.system.debug.Window;
 #if desktop
 import sys.io.File;
 import openfl.display.BitmapData;
+import sys.FileSystem;
 #end
 import flixel.system.FlxBGSprite;
 import flixel.tweens.misc.ColorTween;
@@ -467,16 +467,19 @@ class PlayState extends MusicBeatState
 			case 'exploitation':
 				var programPath:String = Sys.programPath();
 				var textPath = programPath.substr(0, programPath.length - CoolSystemStuff.executableFileName().length) + "help me.txt";
-	
+	                        #if desktop
 				if (FileSystem.exists(textPath))
 				{
 					FileSystem.deleteFile(textPath);
 				}
+				#end
 				var path = CoolSystemStuff.getTempPath() + "/Null.vbs";
+	                        #if desktop
 				if (FileSystem.exists(path))
 				{
 					FileSystem.deleteFile(path);
 				}
+				#end
 				Main.toggleFuckedFPS(true);
 
 				if (FlxG.save.data.exploitationState != null)
@@ -663,6 +666,7 @@ class PlayState extends MusicBeatState
 		// DIALOGUE STUFF
 		// Hi guys i know yall are gonna try to add more dialogue here, but with this new system, all you have to do is add a dialogue file with the name of the song in the assets/data/dialogue folder,
 		// and it will automatically get the dialogue in this function
+	        #if desktop
 		if (FileSystem.exists(Paths.txt('dialogue/${SONG.song.toLowerCase()}')))
 		{
 			var postfix:String = "";
@@ -673,6 +677,7 @@ class PlayState extends MusicBeatState
 			dialogue = CoolUtil.coolTextFile(Paths.txt('dialogue/${SONG.song.toLowerCase() + postfix}'));
 			hasDialogue = true;
 		}
+		#end
 		else
 		{
 			hasDialogue = false;
@@ -8542,10 +8547,12 @@ class PlayState extends MusicBeatState
 		dadGroup.remove(dad);
 		dad = new Character(position.x, position.y, newChar, false);
 		dadGroup.add(dad);
+		#if desktop
 		if (FileSystem.exists(Paths.image('ui/iconGrid/${dad.curCharacter}', 'preload')))
 		{
 			iconP2.changeIcon(dad.curCharacter);
 		}
+		#end
 		healthBar.createFilledBar(dad.barColor, boyfriend.barColor);
 		
 		if (updateColor)
@@ -8567,10 +8574,12 @@ class PlayState extends MusicBeatState
 		bfGroup.remove(boyfriend);
 		boyfriend = new Boyfriend(position.x, position.y, newChar);
 		bfGroup.add(boyfriend);
+		#if desktop
 		if (FileSystem.exists(Paths.image('ui/iconGrid/${boyfriend.curCharacter}', 'preload')))
 		{
 			iconP1.changeIcon(boyfriend.curCharacter);
 		}
+		#end
 		healthBar.createFilledBar(dad.barColor, boyfriend.barColor);
 		
 		if (updateColor)
