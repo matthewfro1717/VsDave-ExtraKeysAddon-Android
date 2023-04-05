@@ -19,7 +19,6 @@ import flixel.util.FlxStringUtil;
 import lime.utils.Assets;
 import flixel.FlxObject;
 import flixel.addons.util.FlxAsyncLoop;
-#if sys import sys.FileSystem; #end
 #if desktop import Discord.DiscordClient; #end
 
 using StringTools;
