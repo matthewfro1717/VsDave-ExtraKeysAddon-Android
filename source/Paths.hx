@@ -177,7 +177,6 @@ class Paths
 				return langaugeReturnPath;
 			}
 			#end
-			else
 			{
 				return defaultReturnPath;
 			}
