@@ -1,5 +1,6 @@
 package;
 
+import sys.FileSystem;
 import flixel.group.FlxSpriteGroup;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.FlxObject;

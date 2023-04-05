@@ -2,6 +2,7 @@ package;
 
 import flixel.addons.transition.Transition;
 import flixel.addons.transition.FlxTransitionableState;
+import sys.io.File;
 import lime.app.Application;
 import haxe.Exception;
 import Controls.Control;
@@ -18,6 +19,10 @@ import flixel.util.FlxTimer;
 import flixel.math.FlxMath;
 import flixel.util.FlxStringUtil;
 import flixel.FlxSprite;
+#if windows
+import lime.app.Application;
+import sys.FileSystem;
+#end
 
  /**
 	hey you fun commiting people, 

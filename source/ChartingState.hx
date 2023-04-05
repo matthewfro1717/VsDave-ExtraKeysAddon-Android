@@ -1,6 +1,8 @@
 package;
 
 import openfl.system.System;
+import sys.io.File;
+import sys.FileSystem;
 import flixel.FlxCamera;
 import flixel.addons.ui.FlxUIText;
 import haxe.zip.Writer;
@@ -1503,8 +1505,8 @@ class ChartingState extends MusicBeatState
 
 	public static function hahaFunnyRecursed()
 	{
-		var songList = ('assets/songs');
-		for (song in ('assets/songs'))
+		var songList = FileSystem.readDirectory('assets/songs');
+		for (song in FileSystem.readDirectory('assets/songs'))
 		{
 			var removeSong = false;
 
