@@ -26,6 +26,7 @@ import flixel.addons.display.FlxBackdrop;
 import flixel.input.keyboard.FlxKey;
 #if desktop
 import Discord.DiscordClient;
+import sys.FileSystem;
 #end
 
 import flixel.system.FlxSound;
