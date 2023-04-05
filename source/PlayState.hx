@@ -678,7 +678,6 @@ class PlayState extends MusicBeatState
 			hasDialogue = true;
 		}
 		#end
-		else
 		{
 			hasDialogue = false;
 		}
