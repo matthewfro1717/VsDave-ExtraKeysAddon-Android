@@ -4,7 +4,6 @@ import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
-#if sys import sys.FileSystem; #end
 
 class Paths
 {
@@ -70,11 +69,6 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/' + file, type, library);
-			if (FileSystem.exists(langaugeReturnPath))
-			{
-				return langaugeReturnPath;
-			}
-			else
 			{
 				return defaultReturnPath;
 			}
@@ -91,11 +85,6 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/data/$key.txt', TEXT, library);
-			if (FileSystem.exists(langaugeReturnPath))
-			{
-				return langaugeReturnPath;
-			}
-			else
 			{
 				return defaultReturnPath;
 			}
@@ -167,11 +156,6 @@ class Paths
 		if (isLocale())
 		{
 			var langaugeReturnPath = getPath('locale/${LanguageManager.save.data.language}/images/$key.png', IMAGE, library);
-			if (FileSystem.exists(langaugeReturnPath))
-			{
-				return langaugeReturnPath;
-			}
-			else
 			{
 				return defaultReturnPath;
 			}
