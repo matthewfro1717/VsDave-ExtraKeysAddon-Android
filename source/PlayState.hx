@@ -92,7 +92,7 @@ import lime.ui.Window;
 import openfl.geom.Rectangle;
 import openfl.display.Sprite;
 
-import hxcodec.VideoHandler;
+import MP4Handler;
 
 using StringTools;
 
@@ -299,7 +299,7 @@ class PlayState extends MusicBeatState
 	var bfNoteCamOffset:Array<Float> = new Array<Float>();
 	var dadNoteCamOffset:Array<Float> = new Array<Float>();
 
-        var video:VideoHandler = new VideoHandler();
+        var video:MP4Handler = new MP4Handler();
 	public var modchart:ExploitationModchartType;
 	public static var modchartoption:Bool = true;
 	var weirdBG:FlxSprite;
@@ -2429,7 +2429,7 @@ class PlayState extends MusicBeatState
 		inCutscene = true;
 		FlxG.sound.music.stop();
 
-		video = new VideoHandler();
+		video = new MP4Handler();
 		video.finishCallback = function()
 		{
 			switch (curSong.toLowerCase())
@@ -2452,7 +2452,7 @@ class PlayState extends MusicBeatState
 	{
 		inCutscene = true;
 
-		video = new VideoHandler();
+		video = new MP4Handler();
 		video.finishCallback = function()
 		{
 			LoadingState.loadAndSwitchState(new PlayState());
