@@ -1,8 +1,6 @@
 package;
 
 import openfl.system.System;
-import sys.io.File;
-import sys.FileSystem;
 import flixel.FlxCamera;
 import flixel.addons.ui.FlxUIText;
 import haxe.zip.Writer;
@@ -39,6 +37,10 @@ import openfl.events.IOErrorEvent;
 import openfl.media.Sound;
 import openfl.net.FileReference;
 import openfl.utils.ByteArray;
+#if desktop
+import sys.io.File;
+import sys.FileSystem;
+#end
 
 using StringTools;
 
